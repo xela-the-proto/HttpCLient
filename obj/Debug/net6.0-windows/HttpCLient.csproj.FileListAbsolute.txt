@@ -1,0 +1,15 @@
+D:\c#\HttpCLient\bin\Debug\net6.0-windows\HttpCLient.exe
+D:\c#\HttpCLient\bin\Debug\net6.0-windows\HttpCLient.deps.json
+D:\c#\HttpCLient\bin\Debug\net6.0-windows\HttpCLient.runtimeconfig.json
+D:\c#\HttpCLient\bin\Debug\net6.0-windows\HttpCLient.dll
+D:\c#\HttpCLient\bin\Debug\net6.0-windows\HttpCLient.pdb
+D:\c#\HttpCLient\obj\Debug\net6.0-windows\HttpCLient.csproj.AssemblyReference.cache
+D:\c#\HttpCLient\obj\Debug\net6.0-windows\HttpCLient.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\HttpCLient\obj\Debug\net6.0-windows\HttpCLient.AssemblyInfoInputs.cache
+D:\c#\HttpCLient\obj\Debug\net6.0-windows\HttpCLient.AssemblyInfo.cs
+D:\c#\HttpCLient\obj\Debug\net6.0-windows\HttpCLient.csproj.CoreCompileInputs.cache
+D:\c#\HttpCLient\obj\Debug\net6.0-windows\HttpCLient.dll
+D:\c#\HttpCLient\obj\Debug\net6.0-windows\refint\HttpCLient.dll
+D:\c#\HttpCLient\obj\Debug\net6.0-windows\HttpCLient.pdb
+D:\c#\HttpCLient\obj\Debug\net6.0-windows\HttpCLient.genruntimeconfig.cache
+D:\c#\HttpCLient\obj\Debug\net6.0-windows\ref\HttpCLient.dll
