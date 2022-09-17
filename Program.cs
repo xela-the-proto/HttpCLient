@@ -12,9 +12,10 @@ namespace HypertextClient
 {
     class Downloader
     {
-        public static void Main()
+        
+        [STAThread] public static void Main()
         {
-            string toGet;
+            string toGet = "https://www.google.com/";
             Console.WriteLine("paste in the console which page you want to download");
             toGet = Console.ReadLine();
             
@@ -28,6 +29,9 @@ namespace HypertextClient
             Thread.Sleep(TimeSpan.FromSeconds(5));
             
             dlTask.GetAwaiter().GetResult();
+
+            Console.WriteLine("html file downloaded to" + download.SavePath + "\nquitting in 5 seconds");
+            Thread.Sleep(TimeSpan.FromSeconds(5));
         }
     }
 }

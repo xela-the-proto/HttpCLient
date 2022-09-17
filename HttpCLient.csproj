@@ -11,9 +11,11 @@
   <ItemGroup>
     <Reference Include="System.Windows.Forms">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WindowsFormsIntegration">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\WindowsFormsIntegration.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
 
