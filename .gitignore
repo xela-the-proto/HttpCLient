@@ -20,6 +20,8 @@ mono_crash.*
 [Dd]ebugPublic/
 x64/
 x86/
+obj/
+bin/[Dd]ebug
 [Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
