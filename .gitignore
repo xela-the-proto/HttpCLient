@@ -29,6 +29,7 @@ bin/[Dd]ebug
 [Ll]og/
 [Ll]ogs/
 [Oo]bj/
+bin/Release/net6.0-windows/http-client.zip
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

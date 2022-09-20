@@ -11,7 +11,7 @@ namespace HttpCLient
     
     public class Downloader
     {
-        protected bool err = true;
+        static bool err = true;
         static string save_path;
 
         public Downloader()
@@ -25,18 +25,24 @@ namespace HttpCLient
             get => save_path;
         }
 
+        public bool Err
+        {
+            get => err;
+        }
+
         [STAThread] public async Task PageDownloader(string urlToGet)
         {
             HttpClient httpClient = new HttpClient();
             HttpResponseMessage resp = await httpClient.GetAsync(urlToGet);
             try
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Starting download...");
 
                 //if we get apositive code we save
                 if (resp.IsSuccessStatusCode)
                 {
-
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Got it...");
                     //get page asynchronously
                     byte[] data = await resp.Content.ReadAsByteArrayAsync();
@@ -55,20 +61,34 @@ namespace HttpCLient
                 }
                 else throw new HttpRequestException();
 
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Done!");
+                Console.ForegroundColor = ConsoleColor.White;
             }
             catch (InvalidOperationException e)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Error in url!");
                 Interaction.MsgBox("Error in url!", MsgBoxStyle.Critical, "Error!");
+                Console.ForegroundColor = ConsoleColor.White;
+                err = true;
             }
             catch (HttpRequestException e)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Error in website reply!");
                 Interaction.MsgBox("Error in website reply! Reply from website: " + "\n\n" + resp.ReasonPhrase,
                     MsgBoxStyle.Critical, "Error!");
+                Console.ForegroundColor = ConsoleColor.White;
+                err = true;
             }
             catch (ArgumentException e)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Error in file saving!");
                 Interaction.MsgBox("Error in file saving!", MsgBoxStyle.Critical, "Error!");
+                Console.ForegroundColor = ConsoleColor.White;
+                err = true;
             }
 
         }
@@ -89,7 +109,11 @@ namespace HttpCLient
             }
             catch (InvalidDataException e)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Path selection has been cancelled!");
                 Interaction.MsgBox("Path selection has been cancelled!", MsgBoxStyle.Exclamation, "Attention!");
+                Console.ForegroundColor = ConsoleColor.White;
+                err = true;
             }
 
         }));
