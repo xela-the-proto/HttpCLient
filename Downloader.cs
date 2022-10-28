@@ -13,11 +13,16 @@ namespace HttpCLient
     {
         static bool err = true;
         static string save_path;
+        static protected string URL;
 
         public Downloader()
         {
             err = false;
             save_path = "";
+        }
+        public string Get_url
+        {
+            get => URL;
         }
 
         public string SavePath
@@ -34,6 +39,7 @@ namespace HttpCLient
         {
             HttpClient httpClient = new HttpClient();
             HttpResponseMessage resp = await httpClient.GetAsync(urlToGet);
+            URL = urlToGet;
             try
             {
                 Console.ForegroundColor = ConsoleColor.Green;
